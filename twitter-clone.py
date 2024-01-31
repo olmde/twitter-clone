@@ -12,3 +12,8 @@ def home():
     
 @app.route('/profile', title='profile')
 
+@app.route('register')
+@app.route('login')
+app.route('/profile')
+
+
