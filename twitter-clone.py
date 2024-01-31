@@ -4,16 +4,23 @@ app = Flask(__name__)
 
 # name = input('enter your name:\n')
 
-app.route('/')
-app.route('/home')
+@app.route('/')
+@app.route('/home')
 def home():
     return render_template('home.html')
     
     
-@app.route('/profile', title='profile')
+@app.route('/profile')
+def profile():
+    pass
 
-@app.route('register')
-@app.route('login')
-app.route('/profile')
+
+@app.route('/register')
+def register():
+    pass
+
+@app.route('/login')
+def login():
+    pass
 
 
