@@ -8,8 +8,8 @@ app = Flask(__name__)
 @app.route('/home')
 def home():
     return render_template('home.html')
-    
-    
+
+
 @app.route('/profile')
 def profile():
     pass
@@ -19,8 +19,11 @@ def profile():
 def register():
     pass
 
+
 @app.route('/login')
 def login():
-    pass
+    return render_template('auth/login.html')
 
 
+if __name__ == '__main__':
+    app.run(debug=True)
