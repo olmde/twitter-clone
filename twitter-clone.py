@@ -20,9 +20,10 @@ def register():
     pass
 
 
-@app.route('/login')
+@app.route('/login', methods=['GET', 'POST'])
 def login():
     return render_template('auth/login.html')
+
 
 
 if __name__ == '__main__':
