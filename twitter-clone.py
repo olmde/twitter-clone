@@ -2,12 +2,16 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-# name = input('enter your name:\n')
-
 
 @app.route('/')
-def func_name():
+def landing():
     return render_template('landing.html')
+
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    return render_template('auth/login.html')
+
 
 @app.route('/home')
 def home():
@@ -23,10 +27,6 @@ def profile():
 def register():
     pass
 
-
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    return render_template('auth/login.html')
 
 
 
